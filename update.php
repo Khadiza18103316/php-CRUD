@@ -6,8 +6,8 @@ if(isset($_POST['update'])){
     $user_id = $_POST['id'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
-    $gender = $_POST['gender'];
     $password = $_POST['password'];
+    $gender = $_POST['gender'];
 
     $sql = "UPDATE 'users' SET 'firstname' = '$firstname', 'lastname'= '$lastname', 'email'='$email', 'password'= '$password', 'gender'='$gender' WHERE 'id' = '$user_id' ";
         $result = $conn->query($sql);
@@ -57,6 +57,9 @@ if($_GET['id']){
             <br>
             Last Name: <br>
             <input type="text" name="lastname">
+            <br>
+            Email: <br>
+            <input type="email" name="email">
             <br>
             Password: <br>
             <input type="password" name="password">
