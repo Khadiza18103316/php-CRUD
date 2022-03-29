@@ -3,7 +3,7 @@ include "config.php";
 
 $sqli = "SELECT *FROM users";
 
-$result = $conn->query($sql);
+$result = $conn->query($sqli);
 ?>
 
 <!DOCTYPE html>
@@ -30,10 +30,9 @@ $result = $conn->query($sql);
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Action</th>
-
                 </tr>
             </thead>
             <tbody>

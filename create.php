@@ -2,15 +2,15 @@
 include "config.php";
 
 if(isset($_POST['submit'])){
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $gender = $_POST['gender'];
 
 }
 
-$sql = "INSERT INTO 'users'('firstname', 'lastname', 'email', 'password', 'gender' ) VALUES('$firstname', '$lastname', '$email', '$password', '$gender')";
+$sql = "INSERT INTO 'users'('firstname', 'lastname', 'email', 'password', 'gender' ) VALUES('$first_name', '$last_name', '$email', '$password', '$gender')";
 
 $result = $conn->query($sql);
 if($result == TRUE){

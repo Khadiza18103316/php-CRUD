@@ -20,7 +20,7 @@ if(isset($_POST['update'])){
 
 }
 
-if($_GET['id']){
+if(isset($_GET['id'])){
     $user_id = $_GET['id'];
     $sql = "SELECT *FROM 'users' WHERE 'id' = '$user_id'";
     $result = $conn->query($sql);
@@ -30,8 +30,8 @@ if($_GET['id']){
             $firstname = $row['firstname'];
             $lastname = $row['lastname'];
             $email = $row['email'];
-            $gender = $row['gender'];
             $password = $row['password'];
+            $gender = $row['gender'];
             $id = $row['id']; 
         }
         ?>
@@ -42,11 +42,11 @@ if($_GET['id']){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update Page</title>
 </head>
 
 <body>
-    <h2>Signup Form:</h2>
+    <h2>User Update Form:</h2>
     <form action="" method="post">
         <fieldset>
             <legend>
@@ -80,6 +80,5 @@ if($_GET['id']){
         
         header('Location: view.php');
     }
-
 }
 ?>

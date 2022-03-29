@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-if($_GET['id']){
+if(isset($_GET['id'])){
     $user_id = $_GET['id'];
 
     $sql = "DELETE *FROM 'users' WHERE 'id' = '$user_id'";
